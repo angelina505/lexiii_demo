@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XIII – Elite Club</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style_dark.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="accueil.html">
+          <img src="Logo.svg">
+        </a>
+      </div>
+
+      <button class="menu-toggle" aria-label="Ouvrir le menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="accueil.html" class="active">Accueil</a></li>
+        <li><a href="prestations.html">Prestations</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <section class="intro">
+    <p>« Le club dont on parle à voix basse.</p>
+    <h1>XIII – L’adresse des initiés.</h1>
+    <p>Coaching privé, performance sur mesure, discrétion absolue. »</p>
+  </section>
+
+  <!-- <hr class="separator"> -->
+
+  <div class="container-carte">
+      <img src="portraitbw.jpg" alt="Portrait" class="portrait">
+      <div class="carte">
+        <div class="contenu-carte">
+        <h1>Le mot du fondateur</h1>
+        <div class="texte-carte"></div>
+          <p>
+              Tout est né de la conviction que l’excellence et la discrétion vont de pair.  Face aux demandes de visibilité, j’ai choisi le contraire, créer un club privé, sur mesure, dans des lieux secrets connus uniquement des membres. C’est de cette tension entre confidentialité et performance que nait XIII : destiné à ceux qui partagent cette exigence et cette élégance du silence. 
+              <br>
+              C’est pour cette raison que nous ne travaillons qu’avec un nombre très limité de personnes. Chaque membre est choisi avec soin, pour un accompagnement sans compromis.
+          </p>
+        </div>
+      </div>
+  </div>
+
+  <!-- <hr class="separator"> -->
+
+
+  <!-- <section class="mot-du-fondateur">
+    <h2>Le mot du fondateur :</h2>
+    <p>
+      Tout est né de la conviction que l’excellence et la discrétion vont de pair.  Face aux demandes de visibilité, j’ai choisi le contraire, créer un club privé, sur mesure, dans des lieux secrets connus uniquement des membres. C’est de cette tension entre confidentialité et performance que nait XIII : destiné à ceux qui partagent cette exigence et cette élégance du silence. 
+      <br>
+      C’est pour cette raison que nous ne travaillons qu’avec un nombre très limité de personnes. Chaque membre est choisi avec soin, pour un accompagnement sans compromis.
+    </p>
+  </section> -->
+
+  <section class="arguments">
+    <p>
+      Ce que vous y gagnez :
+    </p>
+    <ul>
+      <li>une progression mesurable et adaptée à vos objectifs (performance, réathlétisation, préparation spécifique) </li>
+      <li>un cadre d’entraînement exigeant mais sur-mesure, pensé pour préserver l’intimité et offrir un espace privilégié</li>
+      <li>une relation de confiance basée sur l’expertise, la transparence et l’innovation.</li>
+    </ul>
+    <p>
+      Ce projet s’adresse à ceux qui ne cherchent pas à faire plus, mais à faire mieux.
+      À ceux qui préfèrent l’excellence à la quantité, la précision à la routine.
+    </p>
+  </section>
+
+  <h2 class="decouvrir-prestations">Découvrir les prestations</h2>
+
+  <section class="services">
+
+    <div class="card">
+      <a  href="prestations.html#prestation-preparation">
+      <h3>Préparation physique</h3>
+      <p>Force, fluidité, résistance : jour après jour, faites de votre corps votre meilleur allié.</p>
+      </a>
+    </div>
+
+    <div class="card" >
+      <a href="prestations.html#prestation-boxe">
+      <h3>Cours de boxe</h3>
+      <p>Alliez rigueur, stratégie et dépassement pour un corps affûté et un mental à toute épreuve.</p>
+      </a>
+    </div>
+
+    <div class="card">
+      <a href="prestations.html#prestation-coaching">
+      <h3>Coaching personnalisé</h3>
+      <p>Un accompagnement global, entre écoute et exigence, pour transformer vos objectifs en performances.</p>
+      </a>
+    </div>
+
+  </section>
+
+  <!-- <div class="cta-contact">
+    <a href="contact.html" class="btn">Contact</a>
+  </div> -->
+
+  <footer>
+    © <span id="year"></span> XIII — Elite Club  
+    · <a href="mentions-legales.html" class="legal-link">Mentions légales</a>
+  </footer>
+
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  
+
+</body>
+
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  toggle.addEventListener('click', () => {
+    toggle.classList.toggle('open');
+    navLinks.classList.toggle('open');
+  });
+</script>
+
+</html>

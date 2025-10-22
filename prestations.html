@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prestations – XIII Coaching</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style_dark.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="accueil.html">
+          <img src="Logo.svg">
+        </a>
+      </div>
+
+      <button class="menu-toggle" aria-label="Ouvrir le menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="accueil.html">Accueil</a></li>
+        <li><a href="prestations.html" class="active">Prestations</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+  </header>
+<section class="rubriques">
+  <span id="prestation-preparation">
+  <div class="rubrique rubrique-1">
+    <div class="texte">
+      <div class="titre-prestation">Préparation physique générale</div>
+      <div class="valeurs">Performance. Résilience. Élégance du mouvement.</div>
+      <p>
+        Pensée pour celles et ceux qui mènent, décident et avancent vite, notre approche de la préparation physique va droit à l’essentiel : un corps fort, mobile et résistant — pour tenir le rythme et garder toujours une longueur d’avance.
+        <br>
+        Chaque programme est exclusivement personnalisé après un entretien individuel. Vos objectifs, votre emploi du temps, votre mode de vie : tout est pris en compte. Ici, pas de séance générique, mais un coaching taillé sur mesure.
+      </p>
+      <div class="question">Au menu :</div>
+      <p>
+        Renforcement musculaire ciblé,
+        <br>Cardio intelligent,
+        <br>Mobilité articulaire sur-mesure,
+        <br>Proprioception & gainage profond,
+        <br>Le tout dans un cadre discret et confidentiel.
+      </p>
+      <div class="question">L'objectif ?</div>
+      <p>
+        Optimiser votre corps comme un véritable capital.
+        <br>Prévenir les blessures, libérer votre énergie, et gagner en fluidité dans chacun de vos gestes, qu’ils soient professionnels, personnels ou sportifs.
+        <br>Parce que l’excellence ne laisse pas de place au hasard.
+      </p>
+    </div>
+    <img src="preparation-physique1.jpg" alt="Image rubrique 2">
+  </div>
+</span>
+
+  <span id="prestation-boxe">
+    <div class="rubrique rubrique-2">
+      <img src="boxe1.jpg">
+      <div class="texte">
+        <div class="titre-prestation">Cours de boxe</div>
+        <div class="valeurs">Puissance. Contrôle. Présence.</div>
+        <p>
+          Un entraînement de boxe pensé pour celles et ceux qui recherchent plus qu’un simple défouloir : une discipline exigeante, un art du mouvement, un exutoire stratégique.
+          <br>
+          Chaque séance est un face-à-face précis et rythmé, où l’on travaille autant le physique que le mental.
+          Travail des appuis, vitesse d’exécution, puissance maîtrisée, cardio affûté et techniques de frappe : tout est ajusté à votre niveau, votre progression et votre énergie du jour.
+          <br>
+          Vous serez coaché avec l’exigence des professionnels, mais dans un cadre confidentiel, respectueux de votre rythme et de votre agenda.
+        </p>
+        <div class="question">Ce que vous venez chercher ?</div>
+        <p>
+          Un corps plus explosif,
+          <br>Une confiance renforcée,
+          <br>Un mental affûté,
+          <br>Et la capacité à rester calme sous pression… en affaires comme en combat.
+          <br>La boxe n’est pas un sport, c’est une attitude. Et vous êtes là pour l’incarner.
+        </p>
+      </div>
+      </div>
+    </span>
+
+  <span id="prestation-coaching">
+  <div class="rubrique rubrique-3">
+    <div class="texte">
+      <div class="titre-prestation">Coaching personnalisé</div>
+      <div class="valeurs">Un objectif clair. Un plan millimétré. Des résultats concrets.</div>
+        <p>
+          Ici, tout commence par vous. <br>
+          Votre rythme, vos contraintes, vos envies. Votre corps, tel qu’il est — et tel qu’il peut devenir.
+          Ce que vous attendez d’un coach ? De l’écoute. De la rigueur. Des résultats.
+          <br>
+          Le coaching personnalisé, c’est l’accompagnement haut de gamme de celles et ceux qui n’ont pas le temps pour l’à-peu-près. Chaque séance est pensée pour répondre à un objectif précis : retrouver la forme, affiner sa silhouette, booster son énergie, se remettre en mouvement, performer, durer.
+          <br>
+          Pas de méthode universelle : un protocole individuel, affiné au fil de votre progression, pour coller à votre réalité du moment.
+        </p>
+        <div class="question">Vous bénéficiez :</div>
+        <ul>
+          <li>D’un programme évolutif 100% adapté,</li>
+          <li>D'un suivi rapproché,</li>
+          <li>D'un cadre motivant et confidentiel,</li>
+          Et de la certitude que chaque minute compte.
+        </ul>
+        <p>
+          Vous avez les ambitions. Nous avons les outils pour les réaliser pleinement.
+        </p>
+      </div>
+    <img src="accompagnement-personnalise1.jpg" alt="Image rubrique 3">
+  </div>
+</span>
+</section>
+
+<div class="devenir-membre">
+  <a href="contact.html">Devenir membre</a>
+</div>
+
+
+  <footer>
+    © <span id="year"></span> XIII — Elite Club  
+    · <a href="mentions-legales.html" class="legal-link">Mentions légales</a>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  toggle.addEventListener('click', () => {
+    toggle.classList.toggle('open');
+    navLinks.classList.toggle('open');
+  });
+</script>
+
+</html>

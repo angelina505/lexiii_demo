@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XIII</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(to bottom, #878274, #24221a);
+      cursor: pointer;
+      overflow: hidden;
+      position: relative;
+      opacity: 1;
+      transition: opacity 1s ease; /* transition pour le fondu sortant */
+    }
+
+    body.fade-out {
+      opacity: 0;
+    }
+
+    .logo-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 800px;
+      max-width: 70%;
+      height: auto;
+    }
+
+    .logo-container img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: auto;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    /* Fade-in pour XIII.svg */
+    .logo-container img.xiii {
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+    }
+
+    /* Dévoilement pour Barres_textes.svg */
+    .logo-container img.barres {
+      clip-path: inset(0 100% 0 0);
+      animation: reveal 1s forwards;
+      animation-delay: 1s;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes reveal {
+      from { clip-path: inset(0 100% 0 0); }
+      to   { clip-path: inset(0 0 0 0); }
+    }
+  </style>
+</head>
+<body onclick="fadeAndRedirect()">
+
+  <div class="logo-container">
+    <img src="XIII.svg" alt="Logo XIII Elite Club" class="xiii">
+    <img src="Barres_textes.svg" alt="Texte superposé" class="barres">
+  </div>
+
+  <script>
+    function fadeAndRedirect() {
+      document.body.classList.add('fade-out');
+      setTimeout(() => {
+        window.location.href = 'accueil.html';
+      }, 1000); // délai du fondu
+    }
+
+    // Redirection automatique après animations + pause
+    setTimeout(() => {
+      fadeAndRedirect();
+    }, 3500);
+  </script>
+
+</body>
+</html>
