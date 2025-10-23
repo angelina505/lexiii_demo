@@ -661,6 +661,121 @@ footer .legal-link:hover {
   margin-bottom: 0.5rem;
 }
 
+/* --- Images Desktop vs Mobile --- */
+.image-desktop {
+  display: block;
+}
+
+.image-mobile {
+  display: none;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* --- VERSION MOBILE --- */
+@media (max-width: 800px) {
+  .rubrique {
+    flex-direction: column;
+    margin: 2rem auto;
+    max-width: 90%;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  /* On cache complètement les images sur mobile */
+  .image-desktop,
+  .image-mobile {
+    display: none;
+  }
+
+  /* Bloc texte : fond noir sur toute la largeur du bloc rubrique */
+  .rubrique .texte {
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    padding: 2rem;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    margin: 0; /* aucune marge externe */
+  }
+
+  /* --- TITRE avec IMAGE DE FOND --- */
+  .rubrique .titre-prestation {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 2rem;       /* Hauteur réduite */
+    margin: 0;
+    text-align: left;
+    font-size: 1.4rem;
+    font-weight: bold;
+    position: relative;
+    width: 100%;                /* prend toute la largeur du fond noir */
+    box-sizing: border-box;
+  }
+
+  /* Superposition noire transparente pour lisibilité */
+  .rubrique .titre-prestation::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+  }
+
+  .rubrique .titre-prestation span {
+    position: relative;
+    z-index: 2;
+  }
+
+  /* --- Espace entre l’image/titre et les valeurs --- */
+  .rubrique .valeurs {
+    margin-top: 1.5rem;          /* espace clair après le titre */
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+  }
+
+  /* Espacement entre rubriques */
+  .rubrique + .rubrique {
+    margin-top: 3rem;
+  }
+
+  /* Taille du texte sur mobile */
+  .rubrique p, 
+  .rubrique ul, 
+  .rubrique li {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .rubriques {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* --- IMAGES DE FOND SPÉCIFIQUES À CHAQUE RUBRIQUE --- */
+  .rubrique-1 .titre-prestation {
+    background-image: url('preparation-physique2.jpg');
+  }
+
+  .rubrique-2 .titre-prestation {
+    background-image: url('boxe2.jpg');
+  }
+
+  .rubrique-3 .titre-prestation {
+    background-image: url('accompagnement-personnalise2.jpg');
+  }
+}
+
+
+
+
 /* devenir membre */
 .devenir-membre {
   background-color: #111;
