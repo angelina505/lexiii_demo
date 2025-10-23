@@ -29,7 +29,7 @@ header {
 /* --- LOGO IMAGE --- */
 
 .logo img {
-  height: 55px;          /* augmente la taille réelle du SVG pour le zoomer */
+  height: 28px;          /* augmente la taille réelle du SVG pour le zoomer */
   width: auto;
   transform: scale(1.3);  /* zoom visuel sans agrandir le canevas */
   transform-origin: center;
@@ -696,5 +696,4 @@ footer .legal-link:hover {
     margin-right: 10vw;
   }
 }
-
 
