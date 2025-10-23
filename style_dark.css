@@ -678,7 +678,7 @@ footer .legal-link:hover {
   .rubrique {
     flex-direction: column;
     margin: 2rem auto;
-    max-width: 90%;
+    max-width: 100%;
     align-items: center;
     overflow: hidden;
   }
@@ -811,4 +811,5 @@ footer .legal-link:hover {
     margin-right: 10vw;
   }
 }
+
 
