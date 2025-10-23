@@ -184,7 +184,6 @@ nav a:hover {
   margin: 2rem auto;
   color: var(--gris);
   background: rgba(0, 0, 0, 0.7);
-  border-radius: 20px;
   padding: 2rem;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   text-align: left;
@@ -194,10 +193,9 @@ nav a:hover {
 
 @media (max-width: 700px) {
   .arguments {
-  margin: 0.8rem;
+  margin: 0.8rem auto;
   color: var(--gris);
   background: rgba(0, 0, 0, 0.7);
-  border-radius: 20px;
   padding: 1rem;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   text-align: left;
@@ -675,9 +673,19 @@ footer .legal-link:hover {
 
 /* --- VERSION MOBILE --- */
 @media (max-width: 800px) {
+
+  /* Supprime toute marge du body et du conteneur principal */
+  .rubriques {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* évite tout décalage horizontal */
+  }
+
   .rubrique {
     flex-direction: column;
-    margin: 2rem auto;
+    margin: 2rem 0;
+    width: 100%;
     max-width: 100%;
     align-items: center;
     overflow: hidden;
@@ -811,5 +819,4 @@ footer .legal-link:hover {
     margin-right: 10vw;
   }
 }
-
 
